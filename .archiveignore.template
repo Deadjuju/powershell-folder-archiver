@@ -1,0 +1,142 @@
+# .archiveignore — Exclusion patterns for ConvertTo-FolderArchive.ps1
+# Same syntax as .gitignore:
+#   - One pattern per line
+#   - Lines starting with # are comments
+#   - *  matches any character except /
+#   - ** matches any path
+#   - A name without / matches anywhere in the tree
+#
+# Rename this file to .archiveignore and place it at the root of the folder to encode.
+# On Windows: Rename-Item .archiveignore.template .archiveignore
+
+# -----------------------------------------------
+# Version control
+# -----------------------------------------------
+.git
+.gitignore
+.gitattributes
+.gitmodules
+.svn
+.hg
+
+# -----------------------------------------------
+# Build outputs & artifacts
+# -----------------------------------------------
+bin
+obj
+out
+dist
+build
+publish
+target
+release
+debug
+
+# -----------------------------------------------
+# Dependencies
+# -----------------------------------------------
+node_modules
+packages
+.nuget
+vendor
+venv
+.venv
+__pypackages__
+
+# -----------------------------------------------
+# IDE & editor files
+# -----------------------------------------------
+.vs
+.vscode
+.idea
+.fleet
+*.user
+*.suo
+*.sln.docstates
+.DS_Store
+Thumbs.db
+
+# -----------------------------------------------
+# Cache & temp files
+# -----------------------------------------------
+*.cache
+*.tmp
+*.temp
+Temp
+tmp
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+.mypy_cache
+.ruff_cache
+
+# -----------------------------------------------
+# Logs & test results
+# -----------------------------------------------
+*.log
+Logs
+logs
+TestResults
+coverage
+.nyc_output
+
+# -----------------------------------------------
+# Secrets & local config
+# -----------------------------------------------
+*.env
+.env
+.env.*
+!.env.example
+secrets.json
+appsettings.Local.json
+appsettings.*.Local.json
+*.pfx
+*.p12
+*.key
+*.pem
+
+# -----------------------------------------------
+# Language-specific: .NET
+# -----------------------------------------------
+*.nupkg
+*.snupkg
+*.dll.config
+project.lock.json
+project.assets.json
+.fake
+
+# -----------------------------------------------
+# Language-specific: Node.js
+# -----------------------------------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn
+*.tgz
+
+# -----------------------------------------------
+# Language-specific: Python
+# -----------------------------------------------
+*.egg-info
+dist-info
+.eggs
+htmlcov
+.tox
+
+# -----------------------------------------------
+# Language-specific: Java / Maven / Gradle
+# -----------------------------------------------
+*.class
+*.jar
+*.war
+*.ear
+.gradle
+gradle-wrapper.jar
+
+# -----------------------------------------------
+# Previous archives (avoid recursion)
+# -----------------------------------------------
+*_archive_part*.txt
+*_archive_part*.log
